@@ -6,6 +6,7 @@ import CharacterCard from "./CharacterCard";
 
 function App() {
   const [characters, setCharacters] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:3000/characters?_limit=10")
@@ -21,7 +22,7 @@ function App() {
     <div className="App">
       <NavBar />
       <CharacterPage characterArr={characterArr} />
-      <Houses characterArr={characterArr} />
+      <Houses characterArr={characterArr} setSearch={setSearch} />
     </div>
   );
 }
