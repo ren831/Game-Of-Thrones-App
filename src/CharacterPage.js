@@ -1,6 +1,5 @@
 import React from "react";
 import { Card } from "semantic-ui-react";
-import CharacterCard from "./CharacterCard";
 
 function CharacterPage({ characterArr }) {
   return (

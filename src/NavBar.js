@@ -1,4 +1,6 @@
 import React from "react";
+import { ReactDOM } from "react";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   const mystyle = {
@@ -10,9 +12,15 @@ function NavBar() {
 
   return (
     <div className="NavBar">
-      <span style={mystyle}>Home</span>
-      <span style={mystyle}>Characters</span>
-      <span style={mystyle}>Houses</span>
+      <NavLink to="/" style={mystyle}>
+        Home
+      </NavLink>
+      <NavLink to="/characters" style={mystyle}>
+        Characters
+      </NavLink>
+      <NavLink to="/houses" style={mystyle}>
+        Houses
+      </NavLink>
     </div>
   );
 }

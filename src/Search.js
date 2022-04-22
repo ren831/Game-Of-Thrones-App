@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Search({ setSearch }) {
+function Search({ setSearch, characterArr }) {
+  const [searchInput, setSearchInput] = useState("");
+  function handleChange(e) {
+    e.preventDefault();
+    console.log(e.target.value);
+  }
   return (
-    <div className="ui search">
-      <div className="ui icon input">
-        <input className="prompt" value={setSearch} />
-        <i className="search icon" />
-      </div>
-    </div>
+    <form className="searchbar" onSubmit={handleChange}>
+      <input
+        type="text"
+        id="search"
+        placeholder="Search by House"
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
+      />
+      <button type="submit">Search</button>
+    </form>
   );
 }
 
