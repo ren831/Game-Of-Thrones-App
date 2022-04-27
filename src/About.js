@@ -1,11 +1,8 @@
 import React from "react";
-import NavBar from "./NavBar";
 
-function Home() {
+function About() {
   return (
     <div>
-      <NavBar />
-      <h1>Welcome To Game Of Thrones App</h1>
       <h1>About Game of Thrones </h1>
       <p>
         George R.R. Martin's best-selling book series "A Song of Ice and Fire"
@@ -26,4 +23,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default About;

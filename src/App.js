@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, NavLink, Router, Switch } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import CharacterPage from "./CharacterPage";
-import Houses from "./Houses";
 import CharacterCard from "./CharacterCard";
 import { Route } from "react-router-dom";
 import Home from "./Home";
+import FormList from "./FormList";
 
 function App() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/characters?_limit=20")
+    fetch("http://localhost:3000/characters")
       .then((r) => r.json())
       .then((data) => setCharacters(data));
   }, []);
@@ -25,11 +25,11 @@ function App() {
         <Route path="/">
           <Home />
         </Route>
-        <Route path="/character">
+        <Route path="/characters">
           <CharacterPage characterArr={characterArr} />
         </Route>
-        <Route path="/houses">
-          <Houses characterArr={characterArr} />
+        <Route path="/FormList">
+          <FormList />
         </Route>
       </div>
     </Switch>

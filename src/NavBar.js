@@ -1,5 +1,4 @@
 import React from "react";
-import { ReactDOM } from "react";
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
@@ -18,8 +17,8 @@ function NavBar() {
       <NavLink to="/characters" style={mystyle}>
         Characters
       </NavLink>
-      <NavLink to="/houses" style={mystyle}>
-        Houses
+      <NavLink to="/FormList" style={mystyle}>
+        New Character Form
       </NavLink>
     </div>
   );
