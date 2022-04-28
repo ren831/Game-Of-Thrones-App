@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function FormList() {
+function FormList({ addNewCharacter }) {
   const [formData, setFormData] = useState({
     id: "",
     firstName: "",
@@ -12,18 +12,31 @@ function FormList() {
   });
 
   function hadleChange(e) {
-    console.log(formData);
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    fetch("http://localhost:3000/characters", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((r) => r.json())
+      .then((newItem) => addNewCharacter(newItem));
   }
 
   return (
     <div>
-      <form onChange={hadleChange}>
+      <form onSubmit={handleSubmit}>
         <input
           onChange={hadleChange}
           type="text"
           name="firstName"
-          placeholder="first Name"
+          placeholder="first-Name"
         />
         <input
           onChange={hadleChange}

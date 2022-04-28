@@ -15,6 +15,11 @@ function App() {
       .then((data) => setCharacters(data));
   }, []);
 
+  function addNewCharacter(newCharacter) {
+    const updatedCharacter = [...characters, newCharacter];
+    setCharacters(updatedCharacter);
+  }
+
   let characterArr = characters.map((character) => {
     return <CharacterCard key={character.id} character={character} />;
   });
@@ -26,10 +31,13 @@ function App() {
           <Home />
         </Route>
         <Route path="/characters">
-          <CharacterPage characterArr={characterArr} />
+          <CharacterPage
+            addNewCharacter={addNewCharacter}
+            characterArr={characterArr}
+          />
         </Route>
         <Route path="/FormList">
-          <FormList />
+          <FormList addNewCharacter={addNewCharacter} />
         </Route>
       </div>
     </Switch>
