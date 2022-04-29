@@ -1,15 +1,30 @@
 # Game of Thrones APP
 
-With simplicity in mind, this App not only allows you to see the characters of Game of Thrones, but information about them. You can see their name(full, first, and last), their title and also which family they belong to. You can also add new characters as the characters grow with the addition of new seasons and spin offs.
+With simplicity in mind, this App not only allows you to see the characters of Game of Thrones utilizing the [GOT API](https://thronesapi.com/). You can see their name(full, first, and last), their title and also which family they belong to. You can also add new characters as the characters grow with the addition of new seasons and spin offs.
 
-## Available Scripts
+You can visit the App here: [GOT-App]()
 
-In the project directory, you can run:
+## Get Your own copy here
 
-### `npm start`
+to create your own copy of this project:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Fork and clone this repo
+2. Click the green 'Code' button at the top right and copy the link
+3. In your terminal, navigate to the directory in which to clone the reopo
+4. Type `git clone <copied-link>` and hit enter
+5. Type `code game-of-thrones-app` and hit enter
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Once on your Text Edditor
+
+1. Open up the Terminal
+2. Enter "npm install"
+3. Enter " npm run server"
+4. Open a new terminal and enter "npm start"
+
+### Features
+
+- Display characters of the GOT characters
+- Each character card displays (image,name,and family)
+- Ability to add new characters
+
+#### Resources used
