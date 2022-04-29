@@ -5,6 +5,7 @@ import CharacterCard from "./CharacterCard";
 import { Route } from "react-router-dom";
 import Home from "./Home";
 import FormList from "./FormList";
+import About from "./About";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -27,17 +28,17 @@ function App() {
   return (
     <Switch>
       <div className="App">
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/characters">
+        <Route exact path="/characters">
           <CharacterPage
             addNewCharacter={addNewCharacter}
             characterArr={characterArr}
           />
         </Route>
-        <Route path="/FormList">
-          <FormList addNewCharacter={addNewCharacter} />
+        <Route exact path="/About">
+          <About />
         </Route>
       </div>
     </Switch>

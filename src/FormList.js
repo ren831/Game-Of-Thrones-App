@@ -31,6 +31,7 @@ function FormList({ addNewCharacter }) {
 
   return (
     <div>
+      <h3>Add New Character</h3>
       <form onSubmit={handleSubmit}>
         <input
           onChange={hadleChange}

@@ -17,8 +17,8 @@ function NavBar() {
       <NavLink to="/characters" style={mystyle}>
         Characters
       </NavLink>
-      <NavLink to="/FormList" style={mystyle}>
-        New Character Form
+      <NavLink to="/About" style={mystyle}>
+        About
       </NavLink>
     </div>
   );
