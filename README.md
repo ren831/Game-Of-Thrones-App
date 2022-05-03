@@ -25,6 +25,4 @@ Once on your Text Edditor
 
 - Display characters of the GOT characters
 - Each character card displays (image,name,and family)
-- Ability to add new characters
-
-#### Resources used
+- Ability to add new characters to the list

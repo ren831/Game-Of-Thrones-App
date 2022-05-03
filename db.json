@@ -529,6 +529,15 @@
       "family": "Bronn",
       "image": "bronn.jpg",
       "imageUrl": "https://thronesapi.com/assets/images/bronn.jpg"
+    },
+    {
+      "id": 53,
+      "firstName": "Rene",
+      "lastName": "Hernandez",
+      "fullName": "The Machine",
+      "title": "",
+      "family": "The Best ",
+      "imageUrl": "https://www.si.com/.image/c_fit%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_620/MTY4MTg2MDIzMDUxOTI4ODQ5/1988-michael-jordan-05810596jpg.jpg"
     }
   ]
 }
